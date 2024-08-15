@@ -52,9 +52,9 @@ fun Cropify(
       }
     }
 
-    if (sampledImageBitmap != null) {
+    sampledImageBitmap?.let {
       Cropify(
-        bitmap = requireNotNull(sampledImageBitmap).imageBitmap,
+        bitmap = it.imageBitmap,
         state = state,
         onImageCropped = onImageCropped,
         option = option,
