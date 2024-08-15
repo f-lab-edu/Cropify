@@ -27,5 +27,15 @@ internal class BitmapLoaderTest {
       2,
       calculateInSampleSize(IntSize(3240, 5760), IntSize(1080, 1920))
     )
+
+    assertEquals(
+      4,
+      calculateInSampleSize(IntSize(6480, 11520), IntSize(1080, 1920))
+    )
+
+    assertEquals(
+      8,
+      calculateInSampleSize(IntSize(12960, 23040), IntSize(1080, 1920))
+    )
   }
 }
